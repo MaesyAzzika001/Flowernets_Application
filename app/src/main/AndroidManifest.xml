@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Flowernets"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ujicoba"
+        tools:targetApi="31">
+        <activity
+            android:name=".DetailChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditMyshopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProductListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllCategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShippingOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RiwayatPesananActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KonfirmasiPembayaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyshopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilTokoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManajemenPelangganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManajemenTokoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KelolaPelangganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaporanPenjualanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TokoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormProdukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KelolaProdukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KelolaPesananActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotFoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCameraScan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ActivityCart"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoverActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityPaymentSuccess" />
+    </application>
+
+</manifest>

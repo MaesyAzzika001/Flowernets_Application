@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/pink_maroon"/> <!-- Warna Background -->
+    <corners android:radius="50dp"/> <!-- Sudut Bundar -->
+    <padding android:left="16dp" android:right="16dp"/> <!-- Padding dalam -->
+</shape>

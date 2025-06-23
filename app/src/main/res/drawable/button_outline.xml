@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent"/> <!-- Background transparan -->
+    <stroke android:width="2dp" android:color="@color/pink"/> <!-- Border warna primary -->
+    <corners android:radius="24dp"/> <!-- Sudut Bundar -->
+    <padding android:left="16dp" android:right="16dp"/> <!-- Padding dalam -->
+</shape>

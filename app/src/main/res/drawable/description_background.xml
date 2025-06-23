@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna Latar Belakang -->
+    <!-- Warna ini adalah pink yang sangat muda, mirip dengan desain Anda. -->
+    <!-- Anda bisa menggantinya dengan #FFF8F9 atau warna lain yang lebih sesuai. -->
+    <solid android:color="#FFF5F6" />
+
+    <!-- Sudut yang Dibulatkan -->
+    <!-- Radius 8dp memberikan sedikit lengkungan yang halus. -->
+    <corners android:radius="8dp" />
+
+    <!-- (Opsional) Tambahkan Garis Tepi jika diperlukan -->
+    <!--
+    <stroke
+        android:width="1dp"
+        android:color="#E0E0E0" />
+    -->
+
+</shape>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Edit Profile"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@android:color/black">
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notif"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Notifikasi"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Foto Profile -->
+            <RelativeLayout
+                android:id="@+id/layout_foto_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_photo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/user"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/iv_profile_photo"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto Profile"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih foto dari galeri"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/panah"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <!-- Input Fields -->
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Nama Toko"/>
+            <EditText
+                android:id="@+id/et_nama_toko"
+                style="@style/ProfileEditText"
+                android:hint="Masukkan nama pengguna"/>
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Nomor Telepon"/>
+            <EditText
+                android:id="@+id/et_nomor_telepon"
+                style="@style/ProfileEditText"
+                android:inputType="phone"
+                android:hint="Masukkan nomor telepon"/>
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Email"/>
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/ProfileEditText"
+                android:inputType="textEmailAddress"
+                android:hint="Masukkan alamat email"
+                android:enabled="false"/> <!-- Email tidak bisa diubah -->
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Tanggal Lahir"/>
+            <EditText
+                android:id="@+id/et_tanggal_lahir"
+                style="@style/ProfileEditText"
+                android:hint="Masukkan tanggal lahir"
+                android:focusable="false"/> <!-- Klik untuk membuka DatePicker -->
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Jenis Kelamin"/>
+            <Spinner
+                android:id="@+id/spinner_jenis_kelamin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                style="@style/LabelTextView"
+                android:text="Alamat"/>
+            <EditText
+                android:id="@+id/et_alamat"
+                style="@style/ProfileEditText"
+                android:hint="Masukkan alamat lengkap"
+                android:gravity="top"
+                android:minLines="3"/>
+
+            <Button
+                android:id="@+id/btn_simpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_buy_now_background"
+                android:text="Simpan"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

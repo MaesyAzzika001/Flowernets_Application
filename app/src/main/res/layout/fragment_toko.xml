@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TokoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi Toko"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/location" android:layout_width="24dp" android:layout_height="24dp" />
+            <LinearLayout android:layout_marginStart="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Alamat Toko Kami" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_shop_address" tools:text="Jl. Ahmad Yani No.23, Wonokromo, Kota Surabaya, Jawa Timur 60231" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#E0E0E0" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"/>
+
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/calendar" android:layout_width="24dp" android:layout_height="24dp" />
+            <LinearLayout android:layout_marginStart="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Hari Kerja" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_shop_work_days" tools:text="Senin - Sabtu" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#E0E0E0" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"/>
+
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/clock" android:layout_width="24dp" android:layout_height="24dp" />
+            <LinearLayout android:layout_marginStart="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Jam Kerja" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_shop_work_hours" tools:text="08.00 - 21.00 WIB" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#E0E0E0" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"/>
+
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/truck" android:layout_width="24dp" android:layout_height="24dp" />
+            <LinearLayout android:layout_marginStart="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Opsi Pengiriman" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Kurir, Ambil di Toko, Pengiriman Same Day" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#E0E0E0" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Toko"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_shop_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            tools:text="Toko bunga kami menyediakan berbagai macam rangkaian bunga segar untuk setiap kesempatan. Dengan pelayanan ramah dan pengiriman tepat waktu, kami berkomitmen memberikan kepuasan terbaik bagi pelanggan."/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

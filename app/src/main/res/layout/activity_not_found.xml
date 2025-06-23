@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+
+    <!-- ScrollView Content -->
+    <ScrollView
+        android:layout_below="@id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/oops_image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:contentDescription="Oops image"
+                android:src="@drawable/not_found" />
+
+            <!-- Not Found Text -->
+            <TextView
+                android:id="@+id/not_found_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Found"
+                android:textSize="18sp"
+                android:textColor="#9C8C8C"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Footer checkout tetap di dalam ScrollView -->
+    <!-- Tapi BottomNavigationView harus di luar ScrollView -->
+
+    <!-- Perbaikan BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/pink2"
+        app:itemTextColor="@color/pink2"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

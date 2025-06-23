@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/tv_nama_toko"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:text="Nama Toko"
+        android:textColor="#000000"
+        android:gravity="start|center_vertical"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_status_toko"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="Aktif"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_lokasi_toko"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="Lokasi"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/action_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Detail]"
+            android:textColor="#0000FF"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/action_verifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Verifikasi]"
+            android:textColor="#0000FF"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/action_blokir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Blokir]"
+            android:textColor="#FF0000"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityCameraScan">
+
+    <androidx.camera.view.PreviewView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#88000000" />
+
+    <!-- Overlay -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Tombol tutup (X) -->
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/close" />
+
+        <!-- Tombol galeri -->
+        <ImageButton
+            android:id="@+id/btnGallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_border"
+            android:src="@drawable/gallery"
+            android:contentDescription="Open Gallery" />
+
+        <!-- Kotak pemindai -->
+        <View
+            android:id="@+id/scanBox"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/scan" />
+
+        <!-- Tombol kamera & kontrol -->
+        <LinearLayout
+            android:id="@+id/controlPanel"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#A0000000"
+            android:gravity="center"
+            android:paddingHorizontal="24dp">
+
+            <!-- Flash -->
+            <ImageButton
+                android:id="@+id/btnFlash"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/flash" />
+
+            <!-- Shutter -->
+            <ImageButton
+                android:id="@+id/btnShutter"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/shutter"
+                android:layout_marginEnd="32dp" />
+
+            <!-- Switch Camera -->
+            <ImageButton
+                android:id="@+id/btnSwitchCamera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_camera" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

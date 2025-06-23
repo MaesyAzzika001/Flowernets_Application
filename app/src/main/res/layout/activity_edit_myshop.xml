@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".EditMyshopActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:elevation="2dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit_shop"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="My Shop"
+            app:navigationIcon="@drawable/back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Logo Toko -->
+            <RelativeLayout
+                android:id="@+id/layout_logo_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_shop_logo_preview"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo_produk"
+                    android:layout_centerVertical="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/iv_shop_logo_preview"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logo Toko"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih foto dari galeri"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/panah"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <!-- Nama Toko -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Toko"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nama toko"
+                android:inputType="textPersonName"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Nomor Telepon -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Telepon"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nomor telepon"
+                android:inputType="phone"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan alamat email"
+                android:inputType="textEmailAddress"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Alamat Toko -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Toko"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan alamat lengkap"
+                android:inputType="textPostalAddress"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Hari Kerja -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hari Kerja"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_work_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contoh: Senin - Sabtu"
+                android:inputType="text"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Jam Kerja -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atur Jam Kerja"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_work_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contoh: 08.00 - 21.00 WIB"
+                android:inputType="text"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Deskripsi Toko -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Toko"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/et_shop_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan deskripsi singkat toko"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:minLines="5"
+                android:background="@drawable/edit_text_border_red"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:layout_margin="16dp"
+        android:backgroundTint="#A41E36"/>
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER DI LUAR SCROLLVIEW DENGAN SHADOW -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Kembali"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kelola Produk"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/setting_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Setting"
+            android:padding="12dp"
+            android:src="@drawable/ic_setting" />
+    </LinearLayout>
+
+    <!-- KONTEN DALAM SCROLLVIEW -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FBEAEF"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="8dp"
+                    android:text="Search for Order"
+                    android:textColor="#A41E36"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Buat Pesanan Button -->
+            <Button
+                android:id="@+id/btn_tambahproduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FBEAEF"
+                android:elevation="5dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="+Tambah Produk"
+                android:textColor="#A41E36"
+                app:cornerRadius="10dp"
+                app:strokeColor="#A41E36"
+                app:strokeWidth="1dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="@drawable/border_table">
+
+                    <!-- HEADER TABEL DENGAN KOLOM TAMBAHAN -->
+                    <TableRow android:background="#A41E36" android:padding="12dp">
+                        <TextView android:text="Nama Produk" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Harga" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Deskripsi" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Kategori" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Jenis" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Warna" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Ukuran" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Gambar" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Jumlah" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:paddingEnd="8dp" />
+                        <TextView android:text="Ditambahkan" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" />
+                        <TextView android:text="Aksi" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" />
+                    </TableRow>
+
+                    <!-- DATA TABEL DENGAN KOLOM TAMBAHAN -->
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp">
+
+                    </TableRow>
+
+                    <!-- Tambahkan baris lain jika perlu -->
+
+                </TableLayout>
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- BOTTOM NAVIGATION VIEW -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemIconTint="@color/pink2"
+        app:itemTextColor="@color/pink2"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

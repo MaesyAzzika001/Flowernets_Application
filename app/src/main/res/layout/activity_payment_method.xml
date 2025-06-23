@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    tools:context=".PaymentMethodActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp">
+        <ImageButton
+            android:id="@+id/btn_back_payment"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_use_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gunakan"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_outline"
+        android:textColor="@color/colorPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/btn_use_payment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header_emoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Money"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/arrow_emoney"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_up"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RadioGroup
+                android:id="@+id/radiogroup_emoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="16dp">
+                <include layout="@layout/item_payment_option" android:id="@+id/option_dana"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_gopay"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_linkaja"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_ovo"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_shopeepay"/>
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/header_va"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Virtual Account"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/arrow_va"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_up"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RadioGroup
+                android:id="@+id/radiogroup_va"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:paddingHorizontal="16dp">
+                <include layout="@layout/item_payment_option" android:id="@+id/option_bca"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_bni"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_bri"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_mandiri"/>
+                <include layout="@layout/item_payment_option" android:id="@+id/option_bsi"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
